@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs/DotNetCore_Applicatiom
+/DotNetCore_Applicatiom.v12.suo
+/CoreServices/bin
+/CoreServices/obj
+/CoreServices/Properties/PublishProfiles
+/CoreServices/CoreServices.csproj.user
+/DotNetCoreMVC

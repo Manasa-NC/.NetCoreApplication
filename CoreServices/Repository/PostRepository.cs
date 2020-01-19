@@ -113,10 +113,14 @@ namespace CoreServices.Repository
 
         public void UpdatePost(Post post)
         {
-            if (db != null)
+            var entity = db.Post.FirstOrDefault(item => item.CategoryId == post.CategoryId);
+            if (entity != null)
             {
                 //Delete that post
-                db.Post.Update(post);
+                entity.Title = post.Title;
+                entity.Description = post.Description;
+                entity.CreatedDate = post.CreatedDate;
+                db.Post.Update(entity);
 
                 //Commit the transaction
                  db.SaveChanges();
